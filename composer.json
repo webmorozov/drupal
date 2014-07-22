@@ -2,39 +2,14 @@
   "name": "jjconsumer/drupal",
   "description": "This package is an installer that will download Drupal from the http://drupal.org website and unpack it at the root of your Composer project.",
 
-  "repositories": [
-    {
-      "type": "package",
-      "package": {
-        "name": "drupal/drupal",
-        "type": "webroot",
-        "version": "7.28",
-        "dist": {
-          "type": "zip",
-          "url": "http://ftp.drupal.org/files/projects/drupal-7.28.zip"
-        },
-        "source": {
-          "type": "git",
-          "url": "http://git.drupal.org/project/drupal.git",
-          "reference": "7.28"
-        },
-        "require": {
-          "fancyguy/webroot-installer": "~1.1.0"
-        },
-        "extra": {
-          "omit-first-directory": "true"
-        }
-      }
-    }
-  ],
-
   "require": {
     "php": ">=5.3.0",
-    "drupal/drupal": "7.28"
+    "mouf/archive-installer": "~1.0"
   },
 
   "extra": {
-    "webroot-dir": "docroot",
-    "webroot-package": "drupal/drupal"
+    "url": "http://ftp.drupal.org/files/projects/drupal-7.28.zip",
+    "target-dir": ".",
+    "omit-first-directory": "true"
   }
 }
